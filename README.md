@@ -1,6 +1,6 @@
 # Pokédex using Next.js
 
-## First generation Pokédex using Next.js
+## First Pokémon generation using Next.js
 
 To start the project, install:
 - Node:
