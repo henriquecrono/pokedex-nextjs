@@ -18,3 +18,8 @@ after all dependencies are installed, run:
 ```
 yarn dev
 ```
+
+This project is available at:
+```
+https://pokedex-nextjs-eight.vercel.app
+```
