@@ -29,7 +29,6 @@ interface PokemonAbilityType {
 }
 
 export default function Pokemon({ pokemon }: { pokemon: PokemonType }) {
-  console.log(pokemon)
   return (
     <div className={styles.pokemonContainer}>
       <h2>{capitalize(pokemon.name)}</h2>
