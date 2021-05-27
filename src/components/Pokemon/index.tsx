@@ -7,8 +7,8 @@ import styles from './pokemon.module.scss';
 interface PokemonType {
   name: string;
   sprites: {
-    other: {};
-    versions: {};
+    other: any; // temp
+    versions: any; // temp
   };
   id: number;
   types: [];
