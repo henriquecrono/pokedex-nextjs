@@ -1,5 +1,8 @@
 import Link from 'next/link';
 
+import styles from '../styles/home.module.scss';
+
+
 interface PropsType {
   pokemon: PokemonType[];
 }
@@ -13,16 +16,16 @@ export default function Home(props: PropsType) {
   const capitalize = (text: string): string => text[0].toUpperCase() + text.substring(1);
 
   return (
-    <div>
-      <h1>Pokémon</h1>
+    <div className={styles.homeContainer}>
+      <h2>First Generation</h2>
 
       {props.pokemon.map((poke: PokemonType, index: number) => {
         return (
-          <div key={index}>
-            <p>{capitalize(poke.name)}</p>
+          <div key={index} className={styles.pokedexList}>
             <Link href={`/pokemon/${poke.name}`}>
-              link
+              <img src={'/icon_pokeball.png'} alt="Pokéball"/>
             </Link>
+            <p>{capitalize(poke.name)}</p>
           </div>
         );
       })}

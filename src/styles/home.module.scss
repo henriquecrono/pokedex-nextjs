@@ -1,0 +1,23 @@
+.homeContainer {
+  max-width: 800px;
+
+  margin: auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  .pokedexList {
+    display: flex;
+    align-items: center;
+
+    gap: .5rem;
+
+    margin: 1rem 0;
+    
+    img {
+      width: 24px;
+      cursor: pointer;
+    }
+  }
+}
