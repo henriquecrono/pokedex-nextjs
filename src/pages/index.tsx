@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 interface PropsType {
   pokemon: PokemonType[];
 }
@@ -7,7 +9,7 @@ interface PokemonType {
   url: string;
 }
 
-const Home = (props: PropsType) => {
+export default function Home(props: PropsType) {
   const capitalize = (text: string): string => text[0].toUpperCase() + text.substring(1);
 
   return (
@@ -18,6 +20,9 @@ const Home = (props: PropsType) => {
         return (
           <div key={index}>
             <p>{capitalize(poke.name)}</p>
+            <Link href={`/pokemon/${poke.name}`}>
+              link
+            </Link>
           </div>
         );
       })}
@@ -36,5 +41,3 @@ export const getStaticProps = async () => {
     revalidate: 60 * 60 * 1
   };
 };
-
-export default Home;

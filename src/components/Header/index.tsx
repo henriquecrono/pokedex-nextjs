@@ -1,15 +1,21 @@
 import { ReactElement } from 'react';
 
+import Link from 'next/link';
+
 import styles from './header.module.scss';
 
-export const Header = (): ReactElement => {
+export default function Header() {
   return (
     <div className={styles.headerContainer}>
-      <img src="/pokedex.webp" alt="Pokédex" />
+      <Link href="/">
+        <img src="/pokedex.webp" alt="Pokédex" />
+      </Link>
 
-      <h1>
-        <strong>Pokédex</strong>
-      </h1>
+      <Link href="/">
+        <h1>
+          <strong>Pokédex</strong>
+        </h1>
+      </Link>
     </div>
   );
 };
