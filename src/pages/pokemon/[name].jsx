@@ -1,22 +1,23 @@
+import Pokemon from '../../components/Pokemon/index';
 
-
-export default function Pokemon({ name }) {
+export default function PokemonPage({ pokemon }) {
   return (
-    <h1>{name}</h1>
-    // <h1>Pokémon</h1>
-  );
+    <Pokemon pokemon={pokemon} />
+  )
 };
 
 export async function getStaticProps({ params }) {
   const name = params.name;
 
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+  const pokemon = await response.json();
+
   return {
     props: {
-      name
+      pokemon
     }
   }
 }
-
 
 export async function getStaticPaths() {
   return {
@@ -36,8 +37,23 @@ export async function getStaticPaths() {
           name: 'venusaur'
         }
       },
+      {
+        params: {
+          name: 'charmander'
+        }
+      },
+      {
+        params: {
+          name: 'charmeleon'
+        }
+      },
+      {
+        params: {
+          name: 'charizard'
+        }
+      },
     ],
-    fallback: true
+    fallback: false
   }
 }
 

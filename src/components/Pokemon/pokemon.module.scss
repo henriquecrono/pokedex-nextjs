@@ -1,0 +1,28 @@
+.pokemonContainer {
+  max-width: 800px;
+
+  margin: auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  .pokemonInfo {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    .pokemonSprites {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 2rem;
+
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+}
